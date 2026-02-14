@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Entre los dos hay un éxtasis único</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=EB+Garamond:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+
+body {
+    margin: 0;
+    background: radial-gradient(circle at center, #2c1b18, #140d0c 80%);
+    font-family: 'EB Garamond', serif;
+    color: #f5e6c8;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* INTRO */
+
+.intro {
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+}
+
+.mensaje-previo {
+    font-size: 20px;
+    margin-bottom: 40px;
+    font-style: italic;
+    opacity: 0.85;
+}
+
+.boton-carta {
+    padding: 15px 35px;
+    font-size: 18px;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(45deg, #a67c52, #d4a373);
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 0 25px rgba(212,163,115,0.8);
+    transition: 0.4s ease;
+    animation: latido 2s infinite;
+}
+
+.boton-carta:hover {
+    transform: translateY(-4px) scale(1.05);
+}
+
+.firma-inicial {
+    margin-top: 30px;
+    font-size: 14px;
+    opacity: 0.6;
+    letter-spacing: 2px;
+}
+
+@keyframes latido {
+    0%,100% { transform: scale(1); }
+    50% { transform: scale(1.08); }
+}
+
+/* PERGAMINO */
+
+.pergamino {
+    display: none;
+    max-width: 900px;
+    width: 100%;
+    background: linear-gradient(to bottom, #fdf6e3, #f5deb3);
+    box-shadow: 0 0 80px rgba(0,0,0,0.8);
+    border-radius: 8px;
+    padding: 50px 40px;
+    color: #2b1a10;
+    position: relative;
+}
+
+/* Bordes quemados */
+
+.pergamino::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    border-radius: 8px;
+    box-shadow:
+        inset 0 0 60px rgba(0,0,0,0.9),
+        inset 0 0 120px rgba(60,30,10,0.8);
+}
+
+.pergamino::after {
+    content: "";
+    position: absolute;
+    inset: -10px;
+    pointer-events: none;
+    background:
+        radial-gradient(circle at top left, rgba(0,0,0,0.9), transparent 40%),
+        radial-gradient(circle at bottom right, rgba(0,0,0,0.9), transparent 40%);
+    filter: blur(6px);
+}
+
+.titulo {
+    text-align: center;
+    font-family: 'Cinzel', serif;
+    font-size: 24px;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+}
+
+.texto {
+    font-size: 18px;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+/* BOTÓN FINAL */
+
+.boton-musica {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.boton-spotify {
+    padding: 14px 30px;
+    font-size: 16px;
+    border: none;
+    border-radius: 40px;
+    background: linear-gradient(45deg, #1DB954, #1ed760);
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(29,185,84,0.6);
+    transition: 0.4s ease;
+}
+
+.boton-spotify:hover {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 0 30px rgba(29,185,84,0.9);
+}
+
+/* Responsive */
+
+@media (max-width: 600px) {
+
+    body {
+        align-items: flex-start;
+    }
+
+    .pergamino {
+        padding: 30px 20px;
+    }
+
+    .texto {
+        font-size: 16px;
+    }
+
+    .titulo {
+        font-size: 20px;
+    }
+}
+
+</style>
+</head>
+<body>
+
+<div class="intro" id="intro">
+    <div class="mensaje-previo">
+        Hay palabras que no se dicen en voz alta...  
+        <br>
+        pero se escriben con fuego.
+    </div>
+
+    <button onclick="mostrarCarta()" class="boton-carta">
+        Leer la carta
+    </button>
+
+    <div class="firma-inicial">
+        Para ti, mi princesa.
+    </div>
+</div>
+
+<div class="pergamino" id="carta">
+
+    <div class="titulo">Entre los dos hay un éxtasis único</div>
+
+    <div class="texto">
+
+        <p>Hoy es San Valentín. Qué lindo es el amor cuando se da, pero también cuando se recibe. En estos momentos estás comiendo lo que más te gusta en el mundo, porque hubiera podido darte flores para llenarte toda la casa, pero son flores que se marchitan. Y como sé que te gustan las flores, pero más las salchipapas, entonces disfrútalas.</p>
+
+        <p>Yo quiero que el mundo se dé cuenta de que tú eres tan única como novia, como persona, como amiga, como hermana, como hija y seguramente lo seas como madre y como esposa. Que el mundo me quite la paz si alguna vez te fallo o si alguna vez no te sirvo para algo. Espero que nuestro matrimonio sea hermoso y que ese “por siempre y para siempre” se convierta en un tatuaje que nunca nos hicimos y marque nuestras mentes y corazones.</p>
+
+        <p>Ojalá pudiera estar este sábado a tu lado para compartir este San Valentín, pero estoy más cerca de lo que crees, porque estoy en esta carta, en esa salchipapa, en esta página, en tu mente, en tus ojos y en todo tu cuerpo. Porque sin tocarte y sin abrazarte aún sigues oliendo a mí, a mi perfume inevitable y a mi olor corporal denso, y a mi estrecha forma de amar. Porque quiero amarte mucho; me daría pena amarte poco.</p>
+
+        <p>Quiero que recuerdes lo loco que me vuelve cada beso lento y despacio, que nos lleva a quitarnos la ropa y hacer el amor como dos locos enamorados; cuando paso mi mano por todo tu cuerpo y combinamos el placer de amar con el placer sexual. Lo bien que se siente estar dentro de ti y escucharte decir cosas al oído, mientras sigo demostrándote el amor, mientras te hago el amor y te vienes de placer...</p>
+
+        <p>Qué explícito es el amor cuando amas y qué lindo es cuando se nota que te aman, ¿no lo crees? Damos lo que somos; es la única realidad que existe. Y ojalá poder tenerte en todas las vidas, en todos los momentos, fechas especiales, días, horas y segundos. Qué rico es darte un beso sin tener sexo y qué rico es abrazarte como mi niña pequeña.</p>
+
+        <p>Explotaré tu mente con sabores, colores e imágenes donde solo estemos tú y yo. Te inundaré de recuerdos para que nunca se te olvide que nadie te ama como yo y que seguramente mi eternidad te pertenezca.</p>
+
+        <p>Con esta carta quiero que explores la sensación del sabor de tu boca con la salchipapa, las imágenes de nuestro sexo y el calor de nuestro amor como niños mimados.</p>
+
+        <p><strong>Te amooo en todos los idiomas, incluso en aquellos que dejaron de existir.</strong></p>
+
+        <div class="boton-musica">
+            <button class="boton-spotify"
+                onclick="window.open('https://open.spotify.com/intl-es/track/1sQrCwV8vvtYLqa0KQlwE9?si=936e9a423bdb4d39','_blank')">
+                Escúchala, es toda para ti 🎶
+            </button>
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+function mostrarCarta() {
+    document.getElementById("intro").style.display = "none";
+    document.body.style.alignItems = "flex-start";
+    document.getElementById("carta").style.display = "block";
+}
+</script>
+
+</body>
+</html>
